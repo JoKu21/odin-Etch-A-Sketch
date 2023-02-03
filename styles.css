@@ -3,3 +3,24 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+#input,
+#submitInput {
+    padding: 0.5rem 1rem;
+    border: 1px solid darkgray;
+}
+
+#submitInput {
+    background-color: aliceblue;
+    border-radius: 5px;
+    font-weight: bold;
+}
