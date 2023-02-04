@@ -33,4 +33,3 @@ so far.
 
 Extra:
 a. use a random color for hover change
-b. try having each pass just add another 10% of black to it so that only after 10 passes is the square completly black.

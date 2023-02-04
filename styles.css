@@ -7,10 +7,15 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding: 2rem;
+    padding-top: 3rem;
+}
+
+#inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 #input,

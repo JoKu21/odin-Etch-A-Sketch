@@ -17,16 +17,31 @@ createGridButton.addEventListener('click', () => {
         document.getElementById('input').focus();
     } else {
         canvas.textContent = ''; //Clear screen
-        console.log(gridCount);
         gridCount = insertGridSize;
-        console.log(gridCount);
 
-        canvas.style.cssText = 'display: flex; flex-wrap: wrap; margin: auto;';
+        canvas.style.cssText = 'display: flex; flex-wrap: wrap;';
         canvas.style.cssText += `width: calc((${gridElemSize}*1rem) * ${gridCount})`;
 
         makeGrid(gridCount);
     }
 });
+
+//function colorChangeMulti for hover-effect
+function colorChangeMulti() {
+    //Color declaration
+    const red = Math.round(Math.random() * 255);
+    const blue = Math.round(Math.random() * 255);
+    const green = Math.round(Math.random() * 255);
+
+    //createColor
+    const color = `rgb(${red}, ${green}, ${blue})`;
+    return color;
+}
+
+//function colorChangeParts
+function colorChangeParts() {
+
+}
 
 //declare and style container
 const canvas = document.getElementById('container');
@@ -40,7 +55,7 @@ function makeGrid(gridCount) {
         gridElem.classList.add('item');
         gridElem.style.cssText = `height: calc(${gridElemSize}*1rem); width: calc(${gridElemSize}*1rem); background-color: white; border: 1px solid darkgrey`;
         gridElem.addEventListener('mouseenter', () => {
-            gridElem.style.cssText += 'background-color: black;';
+            gridElem.style.cssText += `background-color: ${colorChangeMulti()};`;
         })
         canvas.appendChild(gridElem);
     }
