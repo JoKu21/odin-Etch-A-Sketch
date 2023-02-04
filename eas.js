@@ -12,8 +12,8 @@ const createGridButton = document.querySelector('#submitInput');
 createGridButton.addEventListener('click', () => {  
     const insertGridSize = document.getElementById('input').value;
     
-    if(insertGridSize > 80) {
-        alert('Number is too high. Chose between 1 and 80.');
+    if(insertGridSize > 100) {
+        alert('Number is too high. Chose between 1 and 100.');
         document.getElementById('input').focus();
     } else {
         canvas.textContent = ''; //Clear screen
@@ -21,7 +21,7 @@ createGridButton.addEventListener('click', () => {
         gridCount = insertGridSize;
         console.log(gridCount);
 
-        canvas.style.cssText = 'display: flex; flex-wrap: wrap; max-width: 960px; max-height: 960px; margin: auto;';
+        canvas.style.cssText = 'display: flex; flex-wrap: wrap; margin: auto;';
         canvas.style.cssText += `width: calc((${gridElemSize}*1rem) * ${gridCount})`;
 
         makeGrid(gridCount);
@@ -30,7 +30,7 @@ createGridButton.addEventListener('click', () => {
 
 //declare and style container
 const canvas = document.getElementById('container');
-canvas.style.cssText = 'display: flex; flex-wrap: wrap; max-width: 960px; max-height: 960px; margin: auto;';
+canvas.style.cssText = 'display: flex; flex-wrap: wrap; margin: auto;';
 canvas.style.cssText += `width: calc((${gridElemSize}*1rem) * ${gridCount})`;
 
 //Create Grid
